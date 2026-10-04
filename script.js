@@ -120,7 +120,7 @@ document.querySelector('#compose-form').addEventListener('submit', (event) => {
     author: data.get('author'),
     topic: data.get('topic'),
     excerpt: data.get('excerpt'),
-    body: [data.get('excerpt')],
+    body: data.get('body').split('\n').filter(p => p.trim() !== ''),
     date: 'Just now',
     color: 'green'
   };
